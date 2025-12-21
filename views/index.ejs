@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RogueREX VISION</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                <span>RogueREX VISION</span>
+            </div>
+            <div class="header-controls">
+                </div>
+        </header>
+
+        <main class="workspace">
+            <aside class="sidebar">
+                <div class="input-group">
+                    <div class="label-row">
+                        <label>Prompt</label>
+                        <button id="surpriseBtn" class="subtle-btn" title="Random Idea"><i class="fa-solid fa-dice"></i> Surprise Me</button>
+                    </div>
+                    <div class="textarea-wrapper">
+                        <textarea id="promptInput" placeholder="Describe your imagination... (e.g., A futuristic city made of crystal)" rows="5"></textarea>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="settings-group">
+                    <button class="accordion-toggle" id="advancedToggle">
+                        <span>Advanced Settings</span>
+                        <i class="fa-solid fa-chevron-right arrow"></i>
+                    </button>
+                    
+                    <div class="accordion-content" id="advancedOptions">
+                        <div class="setting-item">
+                            <label>Negative Prompt</label>
+                            <input type="text" id="negativePrompt" placeholder="blur, low quality..." value="blurry, bad quality, deformed, ugly">
+                        </div>
+                        <div class="setting-item">
+                            <div class="slider-label">
+                                <label>Guidance Scale</label>
+                                <span id="guidanceValue">7.5</span>
+                            </div>
+                            <input type="range" id="guidanceScale" min="1" max="20" step="0.5" value="7.5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="spacer"></div>
+
+                <button id="generateBtn" class="generate-btn">
+                    <span class="btn-text">Generate Image</span>
+                    <div class="loader" id="btnLoader"></div>
+                </button>
+            </aside>
+
+            <section class="canvas-area">
+                <div class="canvas-wrapper" id="imageStage">
+                    <div class="empty-state">
+                        <i class="fa-regular fa-image"></i>
+                        <p>Your masterpiece will appear here</p>
+                    </div>
+                    <img id="resultImage" src="" alt="Generated Art">
+                    
+                    <div class="floating-actions hidden" id="imageActions">
+                        <button id="clearMainBtn" class="fab-btn delete-btn" title="Clear Canvas">
+                            <i class="fa-regular fa-trash-can"></i>
+                        </button>
+                        <a id="downloadLink" href="#" download="dream-canvas.png" class="fab-btn" title="Download High Res">
+                            <i class="fa-solid fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="history-strip">
+                    <div class="history-grid" id="historyGrid">
+                        </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="toast-container"></div>
+    <script src="/script.js"></script>
+</body>
+</html>
