@@ -4,6 +4,8 @@
 
 ![Project Banner](https://img.shields.io/badge/RogueREX-VISION-indigo?style=for-the-badge) ![Status](https://img.shields.io/badge/Status-Operational-success?style=for-the-badge) ![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg?style=for-the-badge&logo=appveyor)](god)
+
 ## 📖 Overview
 
 **RogueREX VISION** is a modern web application that allows users to generate high-quality, 8K resolution images from text descriptions. Built with a focus on UI/UX, it features a sleek "Zinc" dark mode, local history management, and advanced generation controls, mimicking professional tools like Adobe Photoshop or Midjourney.
