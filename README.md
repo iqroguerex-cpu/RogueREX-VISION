@@ -1,4 +1,4 @@
-# 👁️ RogueREX VISION
+# 👁️ RogueREX VISION.
 
 > **Unleash your imagination.** A premium, high-performance AI image generation studio powered by Stable Diffusion XL and the Hugging Face Inference API.
 
